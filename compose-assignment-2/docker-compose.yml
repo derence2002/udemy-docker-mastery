@@ -46,8 +46,8 @@ services:
 
 secrets:
    psql-pw: 
-        external: echo "<pw>" | docker secret create psql-pw -
-
+    external: true
+   
 volumes:
   drupal-data:
   drupal-modules:
