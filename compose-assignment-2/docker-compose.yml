@@ -15,7 +15,7 @@ services:
   postgres:
     image: postgres:9.6  
     environment: 
-      - POSTGRES_PASSWORD_FILE=/tmp/psql_pw
+      - POSTGRES_PASSWORD_FILE=/run/secrets/psql_password
     secrets: 
       - psql-pw  
     volumes:
