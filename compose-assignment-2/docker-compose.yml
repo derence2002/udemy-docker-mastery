@@ -15,9 +15,9 @@ services:
   postgres:
     image: postgres:9.6  
     environment: 
-      - POSTGRES_PASSWORD_FILE=/run/secrets/psql_password
+      POSTGRES_PASSWORD_FILE: /run/secrets/psql_password
     secrets: 
-      - psql-pw  
+      - psql-pw
     volumes:
       - drupal-data:/var/lib/postgresql/data
 
